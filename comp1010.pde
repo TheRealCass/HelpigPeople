@@ -1,5 +1,7 @@
-int x = 0;
+int x = width/2;
 int speed = 1;
+final boolean DEBUG = true;
+int counter = 0;
 
 void start () {
   size(500, 500);
@@ -14,6 +16,7 @@ void settings() {
 void draw () {
 
   background(0);
+  //fill(255,0,0);
   ellipse(width/2, height/2, x, x);
   boolean changeCol = DoesItChangeCOl();//checks if mouse is in circle
 
@@ -21,34 +24,38 @@ void draw () {
 
     switchBetweenRedAndWhite();
   }
+  x = x + speed;
   chahgeSizeAuto(x);
 }
 
 
 void switchBetweenRedAndWhite() {
-  int counter = 0;
-  if (counter > 1) {
+  int speedOfOneFrame = 10;
+  if (counter > speedOfOneFrame*2) {
     counter = 0;
   }
   counter++;
-
-  if (counter == 0) {
-    fill(0);
+  if (counter < speedOfOneFrame) {
+    fill(255, 255, 255);
   } else {
     fill(255, 0, 0);
   }
+  if (DEBUG ) {
+    println(counter);
+  }
 }
 
-  boolean DoesItChangeCOl () {
+boolean DoesItChangeCOl () {
 
-    
-  }
 
-  void chahgeSizeAuto(int x) {
-    x = x + speed;
-    if ( x > width/2) {
-      speed*= -1;
-    } else if ( x < 1) {
-      speed*= -1;
-    }
+
+}
+
+void chahgeSizeAuto(int x) {
+
+  if ( x > width) {
+    speed*= -1;
+  } else if ( x < 1) {
+    speed*= -1;
   }
+}
