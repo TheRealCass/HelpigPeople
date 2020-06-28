@@ -46,8 +46,17 @@ void switchBetweenRedAndWhite() {
 }
 
 boolean DoesItChangeCOl () {
-
-
+  /**everythiing is already set up
+    * if this function returns false, evrything runs normally
+    * if it returns true, the programs gets stuck in a loop and 
+    * it is not able to reach the code that tell it to enlarge its size
+    * this function will check the mouseX and mouseY and see if they are in the circle
+    * the width & height of the circle is defined by x.
+    * note that x starts from 0, but is drawn in the middle of the sceen.
+    * so, the value of x is half the width/ height when is drwan at it's biggest
+    * hope this helps. good luck/
+    
+    
 
 }
 
