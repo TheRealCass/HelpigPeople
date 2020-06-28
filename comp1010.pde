@@ -54,7 +54,7 @@ boolean DoesItChangeCOl () {
     * the width & height of the circle is defined by x.
     * note that x starts from 0, but is drawn in the middle of the sceen.
     * so, the value of x is half the width/ height when is drwan at it's biggest
-    * hope this helps. good luck/
+    * hope this helps. good luck**/
     
     
 
